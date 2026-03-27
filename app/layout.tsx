@@ -72,6 +72,9 @@ export const metadata: Metadata = {
       "Maquilleuse professionnelle à Metz. Mode, shootings éditoriaux, Fashion Week, Opéra, mariage.",
     images: ["/og-image.jpg"],
   },
+  alternates: {
+    canonical: "https://cyriellethiebaut.com",
+  },
   robots: {
     index: true,
     follow: true,
