@@ -1,9 +1,10 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { cn } from "@/app/lib/utils";
 import { Container } from "@/app/components/ui/Container";
 import { Button } from "@/app/components/ui/Button";
@@ -12,6 +13,7 @@ import { NAV_LINKS, MAILTO_CTA } from "@/app/lib/constants";
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -23,6 +25,28 @@ export function Header() {
     document.body.style.overflow = isOpen ? "hidden" : "";
     return () => { document.body.style.overflow = ""; };
   }, [isOpen]);
+
+  // Close menu on route change
+  useEffect(() => {
+    setIsOpen(false);
+  }, [pathname]);
+
+  const handleNavClick = useCallback((e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    const hash = href.replace("/", "");
+    const isHome = pathname === "/" || pathname === "";
+
+    if (isHome && hash.startsWith("#")) {
+      e.preventDefault();
+      const target = document.querySelector(hash);
+      if (target) {
+        target.scrollIntoView({ behavior: "smooth" });
+      }
+      setIsOpen(false);
+    } else {
+      // On a sub-page: let the Link navigate to homepage, then scroll
+      setIsOpen(false);
+    }
+  }, [pathname]);
 
   return (
     <header
@@ -49,6 +73,7 @@ export function Header() {
               <Link
                 key={link.href}
                 href={link.href}
+                onClick={(e) => handleNavClick(e, link.href)}
                 className="font-body text-sm text-muted hover:text-accent transition-colors duration-300"
               >
                 {link.label}
@@ -90,7 +115,7 @@ export function Header() {
                 >
                   <Link
                     href={link.href}
-                    onClick={() => setIsOpen(false)}
+                    onClick={(e) => handleNavClick(e, link.href)}
                     className="font-heading text-3xl text-foreground hover:text-accent transition-colors"
                   >
                     {link.label}
