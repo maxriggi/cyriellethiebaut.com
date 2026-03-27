@@ -7,6 +7,7 @@ import { Container } from "@/app/components/ui/Container";
 import { Heading } from "@/app/components/ui/Heading";
 import { FadeIn } from "@/app/components/animations/FadeIn";
 import { PORTFOLIO_CATEGORIES } from "@/app/lib/constants";
+import { img } from "@/app/lib/utils";
 import { motion } from "framer-motion";
 
 export function PortfolioSection() {
@@ -40,7 +41,7 @@ export function PortfolioSection() {
                     }`}
                   >
                     <Image
-                      src={item.cover}
+                      src={img(item.cover)}
                       alt={item.coverAlt}
                       fill
                       className="object-cover"

@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
+import { img } from "@/app/lib/utils";
 import { Container } from "@/app/components/ui/Container";
 import { Heading } from "@/app/components/ui/Heading";
 import { FadeIn } from "@/app/components/animations/FadeIn";
@@ -80,7 +81,7 @@ export default function ModePage() {
                   className="group relative overflow-hidden rounded-lg aspect-[3/4] block"
                 >
                   <Image
-                    src={cat.cover}
+                    src={img(cat.cover)}
                     alt={cat.coverAlt}
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-105"

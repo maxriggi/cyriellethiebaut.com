@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { cn } from "@/app/lib/utils";
+import { cn, img } from "@/app/lib/utils";
 
 interface PlaceholderImageProps {
   className?: string;
@@ -32,7 +32,7 @@ export function PlaceholderImage({
     >
       {src ? (
         <Image
-          src={src}
+          src={img(src)}
           alt={label || ""}
           fill
           className="object-cover"

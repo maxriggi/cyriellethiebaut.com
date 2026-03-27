@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { img } from "@/app/lib/utils";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import { FadeIn } from "@/app/components/animations/FadeIn";
 
@@ -57,7 +58,7 @@ export function PortfolioGallery({ images, columns = 3 }: PortfolioGalleryProps)
               className="relative w-full mb-4 overflow-hidden rounded-lg cursor-pointer group block break-inside-avoid"
             >
               <Image
-                src={image.src}
+                src={img(image.src)}
                 alt={image.alt}
                 width={800}
                 height={1200}
@@ -122,7 +123,7 @@ export function PortfolioGallery({ images, columns = 3 }: PortfolioGalleryProps)
               onClick={(e) => e.stopPropagation()}
             >
               <Image
-                src={images[lightboxIndex].src}
+                src={img(images[lightboxIndex].src)}
                 alt={images[lightboxIndex].alt}
                 width={1600}
                 height={2400}
