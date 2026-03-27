@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import Link from "next/link";
 import { cn } from "@/app/lib/utils";
 import { Container } from "@/app/components/ui/Container";
 import { Button } from "@/app/components/ui/Button";
@@ -35,23 +36,23 @@ export function Header() {
       <Container>
         <nav className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <a
-            href="#"
+          <Link
+            href="/"
             className="font-display text-xl md:text-2xl text-foreground tracking-wide"
           >
             Cyrielle Thiebaut
-          </a>
+          </Link>
 
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-8">
             {NAV_LINKS.map((link) => (
-              <a
+              <Link
                 key={link.href}
                 href={link.href}
                 className="font-body text-sm text-muted hover:text-accent transition-colors duration-300"
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
             <Button variant="primary" size="sm" href={MAILTO_CTA}>
               Me contacter
@@ -81,17 +82,20 @@ export function Header() {
           >
             <div className="flex flex-col items-center justify-center h-full gap-8">
               {NAV_LINKS.map((link, i) => (
-                <motion.a
+                <motion.div
                   key={link.href}
-                  href={link.href}
-                  onClick={() => setIsOpen(false)}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.1 + i * 0.05 }}
-                  className="font-heading text-3xl text-foreground hover:text-accent transition-colors"
                 >
-                  {link.label}
-                </motion.a>
+                  <Link
+                    href={link.href}
+                    onClick={() => setIsOpen(false)}
+                    className="font-heading text-3xl text-foreground hover:text-accent transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                </motion.div>
               ))}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}

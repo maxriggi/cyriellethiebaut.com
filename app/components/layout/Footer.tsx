@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Container } from "@/app/components/ui/Container";
 import { NAV_LINKS, SOCIALS, CONTACT } from "@/app/lib/constants";
 import { Instagram, ExternalLink } from "lucide-react";
@@ -25,12 +26,12 @@ export function Footer() {
             <ul className="space-y-2">
               {NAV_LINKS.map((link) => (
                 <li key={link.href}>
-                  <a
+                  <Link
                     href={link.href}
                     className="text-sm text-muted hover:text-accent transition-colors"
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -67,9 +68,15 @@ export function Footer() {
         <div className="accent-line mt-10 mb-6" />
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-muted">
           <p>&copy; 2026 Cyrielle Thiebaut. Tous droits réservés.</p>
-          <p>
-            {CONTACT.zone}
-          </p>
+          <div className="flex items-center gap-4">
+            <Link
+              href="/mentions-legales"
+              className="hover:text-accent transition-colors"
+            >
+              Mentions légales
+            </Link>
+            <span>{CONTACT.zone}</span>
+          </div>
         </div>
       </Container>
     </footer>

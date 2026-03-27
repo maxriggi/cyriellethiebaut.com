@@ -2,10 +2,10 @@ import { Camera, Sparkles, Heart } from "lucide-react";
 
 // Navigation
 export const NAV_LINKS = [
-  { label: "Portfolio", href: "#portfolio" },
-  { label: "Services", href: "#prestations" },
-  { label: "À propos", href: "#about" },
-  { label: "Contact", href: "#contact" },
+  { label: "Portfolio", href: "/#portfolio" },
+  { label: "Services", href: "/#prestations" },
+  { label: "À propos", href: "/#about" },
+  { label: "Contact", href: "/#contact" },
 ] as const;
 
 // Contact

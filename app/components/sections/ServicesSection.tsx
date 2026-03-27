@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { Container } from "@/app/components/ui/Container";
 import { Heading } from "@/app/components/ui/Heading";
@@ -32,13 +33,13 @@ export function ServicesSection() {
                     {service.price}
                   </span>
                   {"link" in service && (
-                    <a
+                    <Link
                       href={service.link}
                       className="inline-flex items-center gap-1 font-accent text-xs tracking-wider text-muted hover:text-accent transition-colors"
                     >
                       En savoir plus
                       <ArrowUpRight className="w-3 h-3" />
-                    </a>
+                    </Link>
                   )}
                 </div>
               </div>

@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { cn } from "@/app/lib/utils";
 import { motion, type HTMLMotionProps } from "framer-motion";
 import { forwardRef } from "react";
@@ -35,17 +36,28 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     };
 
     if (href) {
+      const isExternal = href.startsWith("http") || href.startsWith("mailto:");
+      const classes = cn(baseStyles, variants[variant], sizes[size], className);
+
+      if (isExternal) {
+        return (
+          <motion.a
+            href={href}
+            className={classes}
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+            target={href.startsWith("http") ? "_blank" : undefined}
+            rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
+          >
+            {children}
+          </motion.a>
+        );
+      }
+
       return (
-        <motion.a
-          href={href}
-          className={cn(baseStyles, variants[variant], sizes[size], className)}
-          whileHover={{ scale: 1.02 }}
-          whileTap={{ scale: 0.98 }}
-          target={href.startsWith("http") ? "_blank" : undefined}
-          rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
-        >
-          {children}
-        </motion.a>
+        <Link href={href} className={classes}>
+          {children as React.ReactNode}
+        </Link>
       );
     }
 
