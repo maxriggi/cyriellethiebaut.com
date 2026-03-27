@@ -28,7 +28,7 @@ export function PortfolioSection() {
                 <motion.div
                   whileHover={{ scale: 1.02 }}
                   transition={{ duration: 0.3 }}
-                  className={`relative overflow-hidden rounded-lg cursor-pointer group ${
+                  className={`relative overflow-hidden rounded-lg cursor-pointer group image-glow ${
                     item.aspect === "portrait" ? "row-span-2" : ""
                   }`}
                 >

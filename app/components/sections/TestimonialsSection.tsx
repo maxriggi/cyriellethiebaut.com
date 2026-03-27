@@ -8,7 +8,9 @@ import { TESTIMONIALS, RATING, CONTACT } from "@/app/lib/constants";
 
 export function TestimonialsSection() {
   return (
-    <section id="avis" className="py-20 md:py-32 bg-surface">
+    <section id="avis" className="py-20 md:py-32 bg-gradient-to-b from-surface via-surface to-background relative">
+      {/* Top inner shadow */}
+      <div className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-background/50 to-transparent" />
       <Container>
         <FadeIn>
           <Heading label="Témoignages" className="text-center">

@@ -48,12 +48,17 @@ export function AboutSection() {
 
           {/* Image — right on desktop */}
           <FadeIn direction="right" delay={0.2}>
-            <PlaceholderImage
-              aspect="portrait"
-              label="Portrait de Cyrielle Thiebaut, maquilleuse professionnelle à Metz — mode, opéra, mariage"
-              src="/images/optimized/about/cyrielle-thiebaut-portrait-maquilleuse-professionnelle.webp"
-              className="max-w-md mx-auto lg:max-w-none"
-            />
+            <div className="relative max-w-md mx-auto lg:max-w-none">
+              {/* Accent glow behind image */}
+              <div className="absolute -inset-4 bg-accent/5 rounded-2xl blur-2xl" />
+              <div className="absolute -top-3 -right-3 w-full h-full border border-accent/15 rounded-lg" />
+              <PlaceholderImage
+                aspect="portrait"
+                label="Portrait de Cyrielle Thiebaut, maquilleuse professionnelle à Metz — mode, opéra, mariage"
+                src="/images/optimized/about/cyrielle-thiebaut-portrait-maquilleuse-professionnelle.webp"
+                className="relative image-glow"
+              />
+            </div>
           </FadeIn>
         </div>
       </Container>

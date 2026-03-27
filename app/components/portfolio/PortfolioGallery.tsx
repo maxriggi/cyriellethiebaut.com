@@ -55,7 +55,7 @@ export function PortfolioGallery({ images, columns = 3 }: PortfolioGalleryProps)
               onClick={() => openLightbox(i)}
               whileHover={{ scale: 1.015 }}
               transition={{ duration: 0.3 }}
-              className="relative w-full mb-4 overflow-hidden rounded-lg cursor-pointer group block break-inside-avoid"
+              className="relative w-full mb-4 overflow-hidden rounded-lg cursor-pointer group block break-inside-avoid image-glow"
             >
               <Image
                 src={img(image.src)}

@@ -20,7 +20,8 @@ export function HeroSection() {
           src="/images/optimized/cyrielle-thiebaut-hero.webp"
           className="rounded-none h-full"
         />
-        <div className="absolute inset-0 bg-background/80" />
+        <div className="absolute inset-0 bg-background/70" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/30 via-transparent to-background" />
       </div>
 
       {/* Content — centered */}

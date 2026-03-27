@@ -104,6 +104,20 @@ body {
   background: linear-gradient(90deg, transparent, var(--accent-primary), transparent);
 }
 
+/* Subtle glow for images */
+.image-glow {
+  box-shadow: 0 8px 40px rgba(139, 167, 184, 0.08), 0 2px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Vignette overlay for depth */
+.vignette::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(ellipse at center, transparent 50%, rgba(5, 5, 5, 0.4) 100%);
+}
+
 /* Fluid typography */
 .fluid-display {
   font-size: clamp(3rem, 8vw + 1rem, 7rem);
@@ -123,11 +137,14 @@ body {
   background: var(--background-surface);
   border: 1px solid var(--border);
   border-radius: 12px;
-  transition: border-color 0.3s ease;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.3), 0 0 1px rgba(139, 167, 184, 0.05);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .card-gold:hover {
   border-color: var(--accent-primary);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), 0 0 1px rgba(139, 167, 184, 0.15);
+  transform: translateY(-2px);
 }
 
 /* Hide scrollbar */
