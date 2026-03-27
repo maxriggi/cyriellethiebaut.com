@@ -41,16 +41,14 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
 
       if (isExternal) {
         return (
-          <motion.a
+          <a
             href={href}
             className={classes}
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
             target={href.startsWith("http") ? "_blank" : undefined}
             rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
           >
-            {children}
-          </motion.a>
+            {children as React.ReactNode}
+          </a>
         );
       }
 
