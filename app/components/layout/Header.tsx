@@ -61,7 +61,7 @@ export function Header() {
 
           {/* Mobile Hamburger */}
           <button
-            className="md:hidden relative z-50 p-2 text-foreground"
+            className="md:hidden relative z-[60] p-2 text-foreground"
             onClick={() => setIsOpen(!isOpen)}
             aria-label={isOpen ? "Fermer le menu" : "Ouvrir le menu"}
           >
@@ -78,7 +78,7 @@ export function Header() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-40 bg-background/95 backdrop-blur-xl md:hidden"
+            className="fixed inset-0 z-[55] bg-background/95 backdrop-blur-xl md:hidden"
           >
             <div className="flex flex-col items-center justify-center h-full gap-8">
               {NAV_LINKS.map((link, i) => (

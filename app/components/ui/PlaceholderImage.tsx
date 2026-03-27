@@ -12,7 +12,7 @@ const aspects = {
   portrait: "aspect-[3/4]",
   landscape: "aspect-[4/3]",
   square: "aspect-square",
-  hero: "aspect-[3/4] lg:aspect-auto lg:h-full",
+  hero: "aspect-[4/3] md:aspect-auto md:h-full",
 };
 
 export function PlaceholderImage({

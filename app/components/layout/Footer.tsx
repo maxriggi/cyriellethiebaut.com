@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Container } from "@/app/components/ui/Container";
-import { NAV_LINKS, SOCIALS, CONTACT } from "@/app/lib/constants";
+import { NAV_LINKS, SOCIALS, CONTACT, PORTFOLIO_CATEGORIES } from "@/app/lib/constants";
 import { Instagram, ExternalLink } from "lucide-react";
 
 export function Footer() {
@@ -31,6 +31,21 @@ export function Footer() {
                     className="text-sm text-muted hover:text-accent transition-colors"
                   >
                     {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <span className="font-accent text-xs tracking-[0.2em] uppercase text-accent mb-3 mt-6 block">
+              Portfolio
+            </span>
+            <ul className="space-y-2">
+              {PORTFOLIO_CATEGORIES.map((cat) => (
+                <li key={cat.id}>
+                  <Link
+                    href={cat.slug}
+                    className="text-sm text-muted hover:text-accent transition-colors"
+                  >
+                    {cat.title}
                   </Link>
                 </li>
               ))}

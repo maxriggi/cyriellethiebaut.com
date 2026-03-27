@@ -30,6 +30,7 @@ export const SERVICES = [
     description:
       "Shootings mode, lookbooks, campagnes publicitaires. Un maquillage créatif et photogénique, pensé pour sublimer chaque image.",
     price: "Sur devis",
+    link: "/portfolio/editorial",
   },
   {
     icon: Sparkles,
@@ -37,6 +38,7 @@ export const SERVICES = [
     description:
       "Fashion Week, opéra, concours, galas. Une expertise scénique et créative adaptée à chaque univers artistique.",
     price: "Sur devis",
+    link: "/portfolio/mode",
   },
   {
     icon: Heart,
