@@ -11,6 +11,31 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://cyriellethiebaut.com/portfolio/editorial</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://cyriellethiebaut.com/portfolio/mode</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://cyriellethiebaut.com/portfolio/mariage</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://cyriellethiebaut.com/portfolio/opera</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://cyriellethiebaut.com/portfolio/beaute</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://cyriellethiebaut.com/mentions-legales</loc>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>

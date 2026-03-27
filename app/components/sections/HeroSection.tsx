@@ -16,8 +16,8 @@ export function HeroSection() {
       <div className="absolute inset-0">
         <PlaceholderImage
           aspect="hero"
-          label="Photo hero"
-          src="https://images.unsplash.com/photo-1631248621162-b87af2118f2b?w=1920&q=80"
+          label="Cyrielle Thiebaut, maquilleuse professionnelle à Metz"
+          src="/images/optimized/cyrielle-thiebaut-hero.webp"
           className="rounded-none h-full"
         />
         <div className="absolute inset-0 bg-background/80" />

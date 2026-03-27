@@ -40,3 +40,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Original unoptimized images (keep only /images/optimized/)
+public/images/portfolio/
+public/images/cyrielle-thiebaut-a-propos.JPG
+public/images/cyrielle-thiebaut.jpg

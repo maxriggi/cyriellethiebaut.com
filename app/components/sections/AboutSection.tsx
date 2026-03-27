@@ -50,8 +50,8 @@ export function AboutSection() {
           <FadeIn direction="right" delay={0.2}>
             <PlaceholderImage
               aspect="portrait"
-              label="Portrait Cyrielle"
-              src="https://images.unsplash.com/photo-1512053512703-f21123c8e9d1?w=1200&q=80"
+              label="Portrait de Cyrielle Thiebaut, maquilleuse professionnelle à Metz — mode, opéra, mariage"
+              src="/images/optimized/about/cyrielle-thiebaut-portrait-maquilleuse-professionnelle.webp"
               className="max-w-md mx-auto lg:max-w-none"
             />
           </FadeIn>
