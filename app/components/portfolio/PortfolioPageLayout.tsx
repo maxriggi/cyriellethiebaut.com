@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import { Container } from "@/app/components/ui/Container";
@@ -68,10 +69,12 @@ export function PortfolioPageLayout({
                   href={cat.slug}
                   className="group relative overflow-hidden rounded-lg aspect-[3/4] block"
                 >
-                  <img
+                  <Image
                     src={cat.cover}
                     alt={cat.coverAlt}
-                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    sizes="(max-width: 768px) 50vw, 25vw"
                   />
                   <div className="absolute inset-0 bg-background/40 group-hover:bg-background/20 transition-colors duration-300" />
                   <div className="absolute bottom-0 left-0 right-0 p-4">
