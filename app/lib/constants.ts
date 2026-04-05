@@ -80,15 +80,6 @@ export const PORTFOLIO_CATEGORIES = [
     aspect: "portrait" as const,
   },
   {
-    id: "opera",
-    title: "Opéra",
-    slug: "/portfolio/opera",
-    description: "Maquillage scénique pour l'Opéra-Théâtre de Metz — caractérisation et transformations artistiques.",
-    cover: "/images/optimized/portfolio/opera/maquillage-opera-scene-theatre-metz-01.webp",
-    coverAlt: "Maquillage scénique Opéra-Théâtre de Metz par Cyrielle Thiebaut",
-    aspect: "landscape" as const,
-  },
-  {
     id: "beaute",
     title: "Beauté",
     slug: "/portfolio/beaute",
@@ -184,17 +175,6 @@ export const PORTFOLIO_IMAGES = {
       { src: "/images/optimized/portfolio/mode/les-touristes/maquillage-mode-les-touristes-portrait-02.webp", alt: "Les Touristes portrait — maquillage mode naturel et expressif" },
     ],
   },
-  opera: [
-    { src: "/images/optimized/portfolio/opera/maquillage-opera-scene-theatre-metz-01.webp", alt: "Maquillage scénique Opéra-Théâtre de Metz — caractérisation artistique" },
-    { src: "/images/optimized/portfolio/opera/maquillage-opera-scene-theatre-metz-02.webp", alt: "Scène de l'Opéra de Metz — maquillage de spectacle par Cyrielle Thiebaut" },
-    { src: "/images/optimized/portfolio/opera/maquillage-opera-scene-theatre-metz-03.webp", alt: "Opéra-Théâtre de Metz — maquillage scénique et transformation" },
-    { src: "/images/optimized/portfolio/opera/maquillage-opera-coulisses-artiste-01.webp", alt: "Coulisses de l'opéra — maquillage artiste avant la représentation" },
-    { src: "/images/optimized/portfolio/opera/maquillage-opera-coulisses-artiste-02.webp", alt: "Backstage opéra — mise en beauté scénique d'un artiste lyrique" },
-    { src: "/images/optimized/portfolio/opera/maquillage-opera-coulisses-artiste-03.webp", alt: "Coulisses Opéra-Théâtre de Metz — préparation maquillage spectacle" },
-    { src: "/images/optimized/portfolio/opera/maquillage-opera-spectacle-costume-01.webp", alt: "Spectacle opéra — maquillage et costume d'époque" },
-    { src: "/images/optimized/portfolio/opera/maquillage-opera-spectacle-costume-02.webp", alt: "Opéra de Metz — maquillage scénique avec costume de scène" },
-    { src: "/images/optimized/portfolio/opera/maquillage-opera-spectacle-costume-03.webp", alt: "Maquillage opéra — transformation complète artiste et costume" },
-  ],
 } as const;
 
 // Testimonials — real reviews from mariages.net

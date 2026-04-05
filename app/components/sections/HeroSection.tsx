@@ -61,7 +61,7 @@ export function HeroSection() {
           transition={{ delay: 0.7, duration: 0.6 }}
           className="font-accent text-xs sm:text-sm tracking-[0.3em] uppercase text-muted mb-12"
         >
-          Mode · Shooting · Opéra · Mariage
+          Mode · Shooting · Mariage
         </motion.p>
 
         {/* CTAs */}
