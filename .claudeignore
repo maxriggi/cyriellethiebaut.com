@@ -1,0 +1,28 @@
+# Dependencies
+node_modules/
+
+# Build output
+.next/
+out/
+
+# Images (ne pas lire les binaires)
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.gif
+*.ico
+*.svg
+
+# Fonts
+*.woff
+*.woff2
+*.ttf
+*.otf
+
+# Lock file (trop gros, rarement utile)
+package-lock.json
+
+# Misc
+.DS_Store
+*.log
